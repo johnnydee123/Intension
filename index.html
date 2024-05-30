@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Homepage</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            color: black;
+            background-color: white;
+        }
+        #intentionBox {
+            width: 300px;
+            height: 20px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        #submitButton {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>"Stay focused, and keep pushing forward."</h1>
+    <input type="text" id="intentionBox" placeholder="What's your intention?">
+    <button id="submitButton">Submit</button>
+</body>
 <script>
     var googleScriptURL = 'https://script.google.com/macros/s/AKfycbzYjNQIIBl8gY-s8FxHe4OOUB5bU4Oz1gKV2qD1zlX2vJrLJhijqVyT9Dm2esOTSFhw/exec';
 
@@ -17,3 +45,6 @@
           .catch(error => console.error('Error:', error));
     };
 </script>
+
+</html>
+
