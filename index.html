@@ -1,0 +1,19 @@
+<script>
+    var googleScriptURL = 'https://script.google.com/macros/s/AKfycbzYjNQIIBl8gY-s8FxHe4OOUB5bU4Oz1gKV2qD1zlX2vJrLJhijqVyT9Dm2esOTSFhw/exec';
+
+    document.getElementById('submitButton').onclick = function() {
+        var intention = document.getElementById('intentionBox').value;
+        fetch(googleScriptURL, {
+            method: 'POST',
+            body: JSON.stringify({intention: intention}),
+            headers: new Headers({
+                'Content-Type': 'application/json'
+            })
+        }).then(response => response.json())
+          .then(data => {
+            alert('Intention saved!');
+            document.getElementById('intentionBox').value = ''; // Clear the input after saving
+          })
+          .catch(error => console.error('Error:', error));
+    };
+</script>
